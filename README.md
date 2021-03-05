@@ -8,3 +8,10 @@ WHERE
     AND Col.Table_Name = Tab.Table_Name
     AND Constraint_Type = 'PRIMARY KEY'
 ```
+
+### How do you return the column names of a table?
+```()
+SELECT COLUMN_NAME,* 
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE lower(COLUMN_NAME) like '%request%' 
+```
